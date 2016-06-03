@@ -116,6 +116,10 @@ var Widget = Waterline.Collection.extend({
   identity: 'wbwidget',
   connection: 'wb-widget-database',
   tableName: 'wb_widgets',
+  migrate: 'safe',
+  autoPK: false,
+  autoCreatedAt: false,
+  autoUpdatedAt: false,
   attributes: {
     id: {
       type: 'integer',
@@ -130,10 +134,6 @@ var Widget = Waterline.Collection.extend({
       type: 'text',
       columnName: 'wb_description'
     }
-    migrate: 'safe',
-    autoPK: false,
-    autoCreatedAt: false,
-    autoUpdatedAt: false,
   }
 });
 ```
